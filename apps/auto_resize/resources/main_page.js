@@ -61,8 +61,9 @@ AutoResize.mainPage = SC.Page.design({
           // get metrics, using layer as example
           var metrics = SC.metricsForString(this.get("title"), layer);
           
-          // again, 20 is arbitrary
-          this.adjust("width", metrics.width + 20);
+          // 16 gives a nice amount of space on either side of the text; titleMinWidth is a property
+          // of ButtonView that in essence gives the button a minimum width.
+          this.adjust("width", Math.max(metrics.width, this.get("titleMinWidth")) + 16);
         },
         
         titleDidChange: function(){ 
