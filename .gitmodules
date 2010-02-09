@@ -1,0 +1,3 @@
+[submodule "themes/ace"]
+	path = themes/ace
+	url = git://github.com/ialexi/Ace.git
